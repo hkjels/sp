@@ -40,8 +40,10 @@
              :background-repeat :no-repeat
              :color :white
              :height (px 300)
+             :overflow :hidden
              :position :relative
              :margin-bottom (em 0.5)
+             :max-height (px 350)
              :width (percent 100)}
     [:.motivator {:position :absolute
                   :color :white
@@ -70,10 +72,7 @@
    [:.ms-srch-sb>input {:width (px 140)}]
    [:.ms-socialCommentItem {:margin [[(em 1) 0]]
                             :line-height (em 1.5)}
-    [:img {:margin-right (em 1)}]]
-   [:.bdo-newsimage {:overflow :hidden
-                     :max-height (px 350)}
-    [:img {:width (percent 100)}]]])
+    [:img {:margin-right (em 1)}]]])
 
 (defstyles sharepoint
   [(list

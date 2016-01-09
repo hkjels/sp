@@ -8,23 +8,25 @@
             [sp.styles.flex :as flex]))
 
 (def grid
-  [:.posts-grid {:width (percent 100)
-                 :height (percent 100)
-                 :padding 0
-                 :margin 0}])
+  [:.posts-grid :.ms-srch-group-content {:width (percent 100)
+                                         :height (percent 100)
+                                         :padding 0
+                                         :margin 0}
+   [:& (merge (flex/layout :row) (flex/align :stretch :center) ^:prefix {:flex-wrap :wrap})]])
 
 (def intro
   [:.post-intro {:background-color :white
                  :box-sizing :border-box
                  :border [[(px 1) :solid :lightgray]]
                  :color :inherit
-                 :flex [[1 1 (vw 20)]]
+                 :display :inline-block
                  :max-width (vw 30)
                  :margin air
                  :min-width (vw 24)
                  :position :relative
                  :text-decoration :none
                  :text-align :center}
+   [:& ^:prefix {:flex [[1 1 (vw 25)]]}]
    [:.location {:background-color (rgb 228 2 46)
                 :padding [[(* air 0.5) (* air 2)]]
                 :color :white

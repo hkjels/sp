@@ -109,7 +109,6 @@
        [:p (join ["Vi skal være et flott sted å arbeide for engasjerte, motiverte"
                   "og kompetente medarbeidere og partnere."])]]]
      [:div.wrap
-      [:input {:type :button :value "Woohaa"}]
       [posts-grid-list :ambitions]]]))
 
 (defn ambitions-post-panel []

@@ -25,6 +25,7 @@
                      :source-paths ["src/clj"]
                      :stylesheet sp.css/screen
                      :compiler {:output-to "resources/public/css/compiled/screen.css"
+                                :vendors [:moz :webkit :ms]
                                 :pretty-print? true}}
                     {:id "sharepoint"
                      :source-paths ["src/clj"]

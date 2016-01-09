@@ -4,23 +4,23 @@
             [garden.units :refer [percent vw em px]]))
 
 (defn layout [direction]
-  {:display :flex
-   :flex-direction direction})
+  ^:prefix {:display :flex
+            :flex-direction direction})
 
 (defn align
   ([both]
-   {:align-items both
-    :justify-content both})
+   ^:prefix {:align-items both
+             :justify-content both})
   ([h v]
-   {:align-items h
-    :justify-content v}))
+   ^:prefix {:align-items h
+             :justify-content v}))
 
 (def styles
-  [[:.layout :.layout-row ^:prefix (layout :row)]
-   [:.layout-column ^:prefix (layout :column)]
+  [[:.layout :.layout-row (layout :row)]
+   [:.layout-column (layout :column)]
    [:.layout-wrap ^:prefix {:flex-wrap :wrap}]
-   [:.between ^:prefix (align :space-between)]
-   [:.around ^:prefix (align :space-around)]
-   [:.stretch ^:prefix (align :stretch)]
-   [:.stretch-center ^:prefix (align :stretch :center)]
-   [:.center ^:prefix (align :center)]])
+   [:.between (align :space-between)]
+   [:.around (align :space-around)]
+   [:.stretch (align :stretch)]
+   [:.stretch-center (align :stretch :center)]
+   [:.center (align :center)]])
